@@ -11,12 +11,12 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import {
   AtomIcon,
-  BrainCircuitIcon,
   GridIcon,
   ArrowRightIcon,
   ZapIcon,
   LayersIcon,
   WaypointsIcon,
+  BrainCircuitIcon,
 } from "lucide-react"
 
 export default function Home() {
@@ -32,8 +32,7 @@ export default function Home() {
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
           Explore quantum computing concepts through interactive demos.
-          Train quantum neural networks on maze solving and classification
-          problems — all in your browser.
+          Train quantum neural networks on maze solving — all in your browser.
         </p>
         <div className="flex gap-3 mt-2">
           <Button asChild size="lg">
@@ -42,21 +41,15 @@ export default function Home() {
               Try Maze Solver
             </Link>
           </Button>
-          <Button asChild size="lg" variant="outline">
-            <Link href="/xor">
-              <BrainCircuitIcon className="mr-2 h-5 w-5" />
-              XOR Demo
-            </Link>
-          </Button>
         </div>
       </section>
 
-      {/* Demos */}
+      {/* Demo */}
       <section className="container mx-auto px-4 py-12">
         <h2 className="text-2xl font-bold text-center mb-8">
-          Interactive Demos
+          Interactive Demo
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="max-w-lg mx-auto">
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
@@ -79,35 +72,6 @@ export default function Home() {
             <CardFooter>
               <Button asChild variant="default" className="w-full">
                 <Link href="/maze">
-                  Launch Demo
-                  <ArrowRightIcon className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </CardFooter>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <BrainCircuitIcon className="h-5 w-5" />
-                XOR Classification
-              </CardTitle>
-              <CardDescription>
-                Train a quantum neural network on the classic XOR problem and
-                watch the decision boundary evolve in real time.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="text-sm text-muted-foreground">
-              <ul className="space-y-1">
-                <li>Non-linearly separable classification</li>
-                <li>Decision boundary visualization</li>
-                <li>Live prediction accuracy tracking</li>
-                <li>Comparison of quantum vs classical approaches</li>
-              </ul>
-            </CardContent>
-            <CardFooter>
-              <Button asChild variant="default" className="w-full">
-                <Link href="/xor">
                   Launch Demo
                   <ArrowRightIcon className="ml-2 h-4 w-4" />
                 </Link>
